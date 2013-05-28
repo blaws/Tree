@@ -1,5 +1,5 @@
 Tree
-Benjamin Laws
+blaws
 
 Simple C-code that draws a randomly-generated tree.
 
