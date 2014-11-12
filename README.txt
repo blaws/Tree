@@ -1,9 +1,9 @@
 Tree
 blaws
 
-Simple C-code that draws a randomly-generated tree.
+Simple C++ program that draws a randomly-generated tree.
 
-'q' to quit.
-Any other key to draw again.
+'r' to create new tree.
+'ESC' or 'q' to quit.
 
-Written on RedHat Linux.
+Written on Mac OSX 10.9 using OpenGL/GLUT.

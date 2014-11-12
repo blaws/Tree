@@ -1,8 +1,17 @@
+GCC_OPTIONS=-Wall -pedantic -Iinclude -g -Wno-deprecated
+GL_OPTIONS=-framework OpenGL -framework GLUT 
+OPTIONS=$(GCC_OPTIONS) $(GL_OPTIONS)
+
 all: tree
 
-tree: tree.c gfx.c gfx.h
-	gcc tree.c gfx.c -o tree -lm -lX11
+InitShader.o: InitShader.cpp
+	g++ -c InitShader.cpp $(GCC_OPTIONS)
+
+tree: InitShader.o tree.o
+	g++ $^ $(OPTIONS) -o $@  
+
+tree.o: tree.cpp
+	g++ -c tree.cpp $(GCC_OPTIONS)
 
 clean:
-	rm -f tree
-
+	rm -rf *.o *~ *.dSYM tree
